@@ -1,0 +1,5 @@
+#!/bin/sh
+
+touch /hostlab/RouterU.testdone
+sleep 10
+halt

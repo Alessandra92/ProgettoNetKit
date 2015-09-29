@@ -1,0 +1,14 @@
+ifconfig eth0 192.168.6.10 netmask 255.255.255.0 up
+ifconfig eth1 20.0.0.1 netmask 255.255.255.0 up
+ifconfig eth1:1 20.0.0.3 netmask 255.255.255.0 up
+
+#roma
+route add -net 10.0.0.0 netmask 255.255.255.0 gw 20.0.0.2 dev eth1  
+#vpn
+route add -host 10.8.0.1 gw 20.0.0.2 dev eth1  
+#vpn
+route add -host 10.8.0.6 dev eth0
+#SNAT
+iptables -t nat -A POSTROUTING --out-interface eth1 -s 192.168.6.1 -j SNAT --to-source 20.0.0.3
+#DNAT
+iptables -t nat -A PREROUTING --in-interface eth1 -d 20.0.0.3 --jump DNAT --to-destination 192.168.6.1

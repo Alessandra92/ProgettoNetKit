@@ -1,0 +1,21 @@
+PING www.webing.us (30.0.0.3) 56(84) bytes of data.
+64 bytes from 30.0.0.3: icmp_seq=1 ttl=63 
+64 bytes from 30.0.0.3: icmp_seq=2 ttl=63 
+64 bytes from 30.0.0.3: icmp_seq=3 ttl=63 
+
+PING 20.0.0.3 (20.0.0.3) 56(84) bytes of data.
+From 192.168.5.10 icmp_seq=1 Destination Net Unreachable
+From 192.168.5.10 icmp_seq=2 Destination Net Unreachable
+From 192.168.5.10 icmp_seq=3 Destination Net Unreachable
+
+--- 20.0.0.3 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 1013ms
+
+PING 10.0.0.6 (10.0.0.6) 56(84) bytes of data.
+64 bytes from 10.0.0.6: icmp_seq=1 ttl=61 time=27.9 ms
+64 bytes from 10.0.0.6: icmp_seq=2 ttl=61 time=1.09 ms
+64 bytes from 10.0.0.6: icmp_seq=3 ttl=61 time=1.09 ms
+
+--- 10.0.0.6 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 1024ms
+rtt min/avg/max/mdev = 1.091/10.050/27.962/12.665 ms

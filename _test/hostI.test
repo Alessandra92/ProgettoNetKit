@@ -1,0 +1,16 @@
+#!/bin/sh
+
+ping -c 3 -i 0.5 www.webing.eu | head -n -3 | sed 's/time=.*//'
+
+ping -c 3 -i 0.5 www.webing.us | head -n -3 | sed 's/time=.*//'
+
+ping -c 3 -i 0.5 30.0.0.5
+
+ping -c 3 -i 0.5 10.0.0.6 
+
+ping -c 3 -i 0.5 20.0.0.3
+
+
+touch /hostlab/hostI.testdone
+sleep 5
+halt

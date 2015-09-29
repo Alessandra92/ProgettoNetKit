@@ -1,0 +1,5 @@
+#!/bin/sh
+
+touch /hostlab/RouterInt.testdone
+sleep 10
+halt

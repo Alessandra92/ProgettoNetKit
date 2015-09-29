@@ -1,0 +1,5 @@
+#!/bin/sh
+
+touch /hostlab/WebR.testdone
+sleep 10
+halt

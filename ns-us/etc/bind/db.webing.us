@@ -1,0 +1,10 @@
+$TTL   60000
+@        IN SOA     ns-us.webing.us.  root.webing.us. (
+                    2006031202 ; serial
+                    28800 ; refresh
+                    14400 ; retry
+                    3600000 ; expire
+                    0 ; negative cache ttl
+                 )
+@        IN  NS   ns-us.webing.us.
+www      IN  A   30.0.0.3

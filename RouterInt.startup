@@ -1,0 +1,8 @@
+ifconfig eth0 10.0.0.2 netmask 255.255.255.0 up
+ifconfig eth1 20.0.0.2 netmask 255.255.255.0 up
+ifconfig eth2 30.0.0.2 netmask 255.255.255.0 up
+ifconfig eth3 50.0.0.2 netmask 255.255.255.0 up
+#vpn
+route add -host 10.8.0.1 gw 10.0.0.1 dev eth0 
+#vpn
+route add -host 10.8.0.6 gw 20.0.0.1 dev eth1

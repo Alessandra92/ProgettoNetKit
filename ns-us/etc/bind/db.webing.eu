@@ -1,0 +1,10 @@
+$TTL    60000
+@        IN SOA     ns-eu.webing.eu.   root.webing.eu. (
+                    2006031203 ; serial
+                    28800 ; refresh
+                    14400 ; retry
+                    3600000 ; expire
+                    0 ; negative cache ttl
+                 )
+@        IN NS   ns-eu.webing.eu.
+www      IN  A   10.0.0.3

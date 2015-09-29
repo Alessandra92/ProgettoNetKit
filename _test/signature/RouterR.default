@@ -1,0 +1,43 @@
+[NETWORK INTERFACES]
+ eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast qlen 1000    inet 192.168.1.10/24 brd 192.168.1.255 scope global eth0       valid_lft forever preferred_lft forever
+ eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast qlen 1000    inet 10.0.0.1/24 brd 10.0.0.255 scope global eth1    inet 10.0.0.3/24 brd 10.0.0.255 scope global secondary eth1:1    inet 10.0.0.5/24 brd 10.0.0.255 scope global secondary eth1:2    inet 10.0.0.6/24 brd 10.0.0.255 scope global secondary eth1:3       valid_lft forever preferred_lft forever
+ eth2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast qlen 1000    inet 192.168.4.10/24 brd 192.168.4.255 scope global eth2       valid_lft forever preferred_lft forever
+ eth3: <BROADCAST,MULTICAST> mtu 1500 qdisc noop qlen 1000
+ lo: <LOOPBACK,UP,LOWER_UP> mtu 16436 qdisc noqueue     inet 127.0.0.1/8 scope host lo    inet6 ::1/128 scope host        valid_lft forever preferred_lft forever
+ teql0: <NOARP> mtu 1500 qdisc noop qlen 100
+
+[ROUTING TABLE]
+10.0.0.0        0.0.0.0         255.255.255.0   U     0      0        0 eth1
+10.8.0.1        0.0.0.0         255.255.255.255 UH    0      0        0 eth0
+10.8.0.6        10.0.0.2        255.255.255.255 UGH   0      0        0 eth1
+192.168.1.0     0.0.0.0         255.255.255.0   U     0      0        0 eth0
+192.168.4.0     0.0.0.0         255.255.255.0   U     0      0        0 eth2
+20.0.0.0        10.0.0.2        255.255.255.0   UG    0      0        0 eth1
+30.0.0.0        10.0.0.2        255.255.255.0   UG    0      0        0 eth1
+50.0.0.0        10.0.0.2        255.255.255.0   UG    0      0        0 eth1
+
+[LISTENING PORTS]
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN     
+udp        0      0 0.0.0.0:111             0.0.0.0:*                          
+[PROCESSES]
+    0 /bin/bash /etc/rc2.d/S99netkit-phase2 start
+    0 /bin/ps -e -o uid,command
+    0 /bin/sh /etc/init.d/rc 2
+    0 /sbin/klogd -x
+    0 /sbin/syslogd
+    0 [aio/0]
+    0 [cifsdnotifyd]
+    0 [cifsoplockd]
+    0 [events/0]
+    0 [kblockd/0]
+    0 [khelper]
+    0 [ksoftirqd/0]
+    0 [kswapd0]
+    0 [kthreadd]
+    0 [nfsiod]
+    0 [pdflush]
+    0 [pdflush]
+    0 [rpciod/0]
+    0 init [2]       
+    1 /sbin/portmap
+

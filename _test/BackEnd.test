@@ -1,0 +1,5 @@
+#!/bin/sh
+
+touch /hostlab/BackEnd.testdone
+sleep 10
+halt

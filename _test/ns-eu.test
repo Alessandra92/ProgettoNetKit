@@ -1,0 +1,6 @@
+#!/bin/sh
+
+touch /hostlab/ns-eu.testdone
+sleep 10
+halt
+

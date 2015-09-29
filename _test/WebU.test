@@ -1,0 +1,5 @@
+#!/bin/sh
+
+touch /hostlab/WebU.testdone
+sleep 10
+halt
